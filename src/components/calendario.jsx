@@ -37,9 +37,9 @@ function Calendario() {
   };
 
   return (
-    <div className="h-full w-full bg-gray-700 border-2 border-gray-50 rounded-xl p-5">
+    <div className="h-full w-full bg-gray-700 border-2 border-gray-50 rounded-xl p-3">
       {/* Header com navegação */}
-      <div className="flex justify-between items-center mb-4">
+      <div className="flex justify-between items-center mb-3">
         <button
           onClick={() => mudarMes(-1)}
           className=" text-4xl cursor-pointer font-bold px-3 hover:text-blue-300"
@@ -69,7 +69,7 @@ function Calendario() {
         {dias.map((dia, i) => (
           <div
             key={i}
-            className={`h-10 flex items-center text-gray-900 justify-center rounded-lg transition ${
+            className={`h-8 flex items-center text-gray-900 justify-center rounded-lg transition ${
               dia
                 ? ehHoje(dia)
                   ? "bg-yellow-400 text-blue-800 font-bold"
