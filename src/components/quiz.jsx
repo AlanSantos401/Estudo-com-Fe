@@ -100,17 +100,17 @@ function Quiz() {
 		<div className="h-full w-full flex flex-col items-center  bg-gray-700 border-2 border-gray-50 rounded-xl p-3 ">
 			<div className="w-full ">
 				<button onClick={() => setDifficulty(null)}>
-					<ArrowLeft className="h-8 w-9 md:h-11 md:w-11 bg-gray-700 border-3 border-gray-50 rounded-3xl cursor-pointer hover:bg-gray-50" />
+					<ArrowLeft className="h-8 w-9 md:h-9 md:w-9 bg-gray-700 border-3 border-gray-50 rounded-3xl cursor-pointer hover:bg-gray-50" />
 				</button>
 			</div>
 			<div className="w-full flex flex-col items-center gap-4 ">
-				<h2 className=" md:text-3xl lg:text-2xl font-bold mb-2">{currentQuestion.question}</h2>
+				<h2 className=" md:text-3xl lg:text-2xl font-bold mb-1">{currentQuestion.question}</h2>
 				<div className="flex flex-col gap-2 w-4/6 lg:w-3/6 cursor-pointer">
 					{currentQuestion.options.map((option) => (
 						<button
 							key={option}
 							onClick={() => handleAnswer(option)}
-							className={`p-2 rounded cursor-pointer ${
+							className={`h-9 text-center p-2 rounded cursor-pointer ${
 								selected === option ? "bg-blue-300" : "bg-gray-200"
 							}`}
 							disabled={!!selected}
@@ -119,9 +119,9 @@ function Quiz() {
 						</button>
 					))}
 				</div>
-				<div className="w-full">
+				<div className="w-full mb-2">
 					{selected && showFeedback && (
-						<p className="font-bold text-xl break-words">
+						<p className="font-medium text-xl break-words">
 							{selected === currentQuestion.answer
 								? "✅ Resposta correta!"
 								: "❌ Resposta incorreta!"}
