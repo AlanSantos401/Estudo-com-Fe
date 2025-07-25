@@ -54,7 +54,7 @@ function App() {
 
 				<div className="flex flex-col lg:flex-row lg:max-h-[84%] w-full gap-4 p-4">
 					<button
-						className="lg:hidden  fixed top-4 right-2 z-50 bg-gray-800 text-white p-2 rounded"
+						className="lg:hidden  fixed top-5 right-4 z-30 bg-gray-800 text-white p-2 rounded"
 						onClick={() => setMenuAberto(true)}
 					>
 						☰
@@ -64,13 +64,13 @@ function App() {
 						ref={menuRef}
 						className={`
                            ${menuAberto ? "flex" : "hidden"}
-                                 fixed inset-0 z-40  lg:static lg:flex
+                                 fixed inset-y-0 right-0 z-40 md:right-0  lg:static lg:flex
                                  w-9/10 md:w-2/4 lg:w-1/4 max-h-full p-4 lg:pt-0
                         `}
 					>
 						<div className="flex flex-col h-[70%] md:h-[43%] lg:h-[84%] w-full bg-gray-800 rounded-xl   text-3xl font-bold text-blue-500 gap-1 p-5 pt-8 ">
 							<button
-								className="lg:hidden absolute top-8 right-10 text-blue-500 text-3xl font-bold"
+								className="lg:hidden absolute top-8 right-10 text-blue-500 text-3xl font-bold hover:text-4xl hover:text-red-600 transition"
 								onClick={() => setMenuAberto(false)}
 							>
 								X
