@@ -63,14 +63,16 @@ function App() {
 					<div
 						ref={menuRef}
 						className={`
-                           ${menuAberto ? "flex" : "hidden"}
-                                 fixed inset-y-0 right-0 z-40 md:right-0  lg:static lg:flex
-                                 w-9/10 md:w-2/4 lg:w-1/4 max-h-full p-4 lg:pt-0
+                        ${menuAberto ? "flex" : "hidden"}
+                           fixed inset-y-0 right-0 z-40
+                           w-4/5 sm:w-2/3 md:w-1/2
+                           lg:static lg:flex lg:w-1/4
+                           max-h-full p-4 lg:pt-0
                         `}
 					>
 						<div className="flex flex-col h-[70%] md:h-[43%] lg:h-[84%] w-full bg-gray-800 rounded-xl   text-3xl font-bold text-blue-500 gap-1 p-5 pt-8 ">
 							<button
-								className="lg:hidden absolute top-8 right-10 text-blue-500 text-3xl font-bold hover:text-4xl hover:text-red-600 transition"
+								className="lg:hidden absolute top-8 right-10 text-blue-500 text-3xl font-bold hover:text-4xl hover:text-red-600 transition-all duration-300"
 								onClick={() => setMenuAberto(false)}
 							>
 								X
@@ -177,11 +179,9 @@ function App() {
 							<RadioPlayer />
 						</div>
 
-						<div className="hidden lg:block lg:h-[35%] lg:w-full bg-amber-500 border-2 border-gray-50 rounded-xl p-4 overflow-auto">
-							<h1 className="text-xl font-bold mb-2">Palavra do dia</h1>
+						<div className="hidden lg:block lg:h-[35%] lg:w-full bg-amber-500 border-2 border-gray-50 rounded-xl p-4">
 							<span className=" text-shadow-blue-500 ">
-								<VersiculoDoDia  />
-								
+								<VersiculoDoDia />
 							</span>
 						</div>
 					</div>

@@ -60,7 +60,7 @@ const Ia = () => {
 
 			<div className=" w-[90%] flex-1 overflow-auto px-4 rounded min-h-[80px] h-[75%]  text-blue-500">
 				{resposta ? (
-					<p className="bg-blue-400 border border-transparent p-2 rounded-xl font-semibold">
+					<p className="bg-blue-400/50 border border-transparent p-2 rounded-xl font-semibold">
 						{resposta}
 					</p>
 				) : (
