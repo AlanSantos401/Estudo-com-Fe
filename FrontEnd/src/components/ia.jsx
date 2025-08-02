@@ -15,7 +15,7 @@ const Ia = () => {
 
 		try {
 			const respostaApi = await fetch(
-				"https://alansan55.app.n8n.cloud/webhook-test/agente-cristao",
+				"https://alansan55.app.n8n.cloud/webhook/89cefb53-c173-456e-a486-2799404711cb",
 				{
 					method: "POST",
 					headers: {
