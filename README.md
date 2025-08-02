@@ -7,10 +7,10 @@ Estudando com Fé é uma plataforma voltada para o estudo do cristianismo, combi
 O projeto conta com um Agente Cristão inteligente, que responde dúvidas e auxilia nos estudos bíblicos, além de oferecer um calendário devocional e um quiz interativo para testar seus conhecimentos.
 A plataforma é totalmente responsiva, funcionando perfeitamente em celulares, tablets e desktops.
 
-Principais funcionalidades:
-📖 Leitura da Palavra de Deus com fácil navegação.
-🤖 IA cristã para tirar dúvidas e aprofundar o conhecimento bíblico.
-❓ Quiz para testar e reforçar o aprendizado.
+Principais funcionalidades: <br/>
+📖 Leitura da Palavra de Deus com fácil navegação.<br/>
+🤖 IA cristã para tirar dúvidas e aprofundar o conhecimento bíblico.<br/>
+❓ Quiz para testar e reforçar o aprendizado.<br/>
 📱 Layout responsivo adaptado para diferentes dispositivos.
 
 
