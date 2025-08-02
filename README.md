@@ -1,6 +1,6 @@
 # Portfilio
 
-<img src="./assets/Portfolio.png" alt="Portfolio" width="400"/>
+<img src="./fontend/src/assets/estudando_com_fe.png" alt="Portfolio" width="400"/>
 
 👋 Olá, eu sou Alan dos Santos
 Sou desenvolvedor Front-end e Full Stack em formação, apaixonado por transformar ideias em soluções digitais funcionais, intuitivas e visualmente atrativas.
