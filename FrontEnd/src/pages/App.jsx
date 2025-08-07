@@ -48,7 +48,7 @@ function App() {
 	return (
 		<>
 			<div className=" flex flex-col justify-center items-center  bg-gray-950 h-[100vh] w-full gap-4">
-				<h1 className="text-4xl pt-5 lg:text-6xl font-bold text-blue-500">
+				<h1 className="text-4xl pt-0 md:pt-5 lg:text-6xl font-bold text-blue-500">
 					ESTUDE COM FÉ
 				</h1>
 
@@ -174,7 +174,7 @@ function App() {
 						</div>
 					</div>
 
-					<div className="h-2/5  lg:h-full w-full lg:w-1/4 order-1 lg:order-3 lg:gap-7 flex flex-col">
+					<div className="h-[35%]  lg:h-full w-full lg:w-1/4 order-1 lg:order-3 lg:gap-7 flex flex-col">
 						<div className=" h-full md:h-50 lg:h-[41%] w-full border-2 border-gray-50 rounded-xl">
 							<RadioPlayer />
 						</div>
