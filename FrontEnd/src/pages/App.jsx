@@ -67,7 +67,7 @@ function App() {
                            fixed inset-y-0 right-0 z-40
                            w-4/5 sm:w-2/3 md:w-1/2
                            lg:static lg:flex lg:w-1/4
-                           max-h-full p-4 lg:pt-0
+                           max-h-[100%] p-4 lg:pt-0
                         `}
 					>
 						<div className="flex flex-col h-[70%] md:h-[43%] lg:h-[84%] w-full bg-gray-800 rounded-xl   text-3xl font-bold text-blue-500 gap-1 p-5 pt-8 ">
@@ -145,7 +145,7 @@ function App() {
 								<span className="text-2xl text-blue-500">Estudo com IA</span>
 							</div>
 
-							<div className="flex items-center w-full mt-11 md:mt-15">
+							<div className="flex items-center w-full mt-18 md:mt-15">
 								<User className="h-6 w-6  text-blue-500 cursor-pointer" />
 								<ChevronUp className="h-6 w-6  text-blue-500 cursor-pointer" />
 							</div>

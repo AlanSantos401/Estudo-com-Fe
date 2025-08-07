@@ -16,7 +16,7 @@ const Ia = () => {
 
 		try {
 			const respostaApi = await fetch(
-				"http://localhost:5678/webhook/agente-cristao",
+				"http://localhost:5678/webhook-test/agente-cristao",
 				{
 					method: "POST",
 					headers: {
