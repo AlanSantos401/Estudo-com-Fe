@@ -71,7 +71,7 @@ function App() {
                            max-h-[100%] p-4 lg:pt-0
                         `}
 					>
-						<div className="flex flex-col max-h-[60vh] overflow-y-auto md:h-[43%] lg:h-[84%] w-full bg-gray-800 rounded-xl   text-3xl font-bold text-blue-500 gap-1 p-5 pt-8 ">
+						<div className="flex flex-col max-h-[60vh] md:h-[43%] lg:h-[84%] w-full bg-gray-800 rounded-xl   text-3xl font-bold text-blue-500 gap-1 p-5 pt-8 ">
 							<button
 								className="lg:hidden absolute top-8 right-10 text-blue-500 text-3xl font-bold  hover:text-red-600 "
 								onClick={() => setMenuAberto(false)}
