@@ -20,7 +20,7 @@ function HarpaCrista() {
 		const hino = harpa[hinoSelecionado];
 
 		return (
-			 <div className="w-full h-full max-h-screen overflow-y-auto bg-gray-700 flex flex-col ">
+			 <div className="w-full h-full max-h-screen overflow-y-auto bg-gray-700 flex flex-col border-transparent rounded-xl">
 				<div className="sticky top-0 z-10 flex justify-between p-3  bg-gray-700 ">
 
 					<button onClick={() => setHinoSelecionado(null)} className="mb-4">

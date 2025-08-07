@@ -30,7 +30,7 @@ function Pesquisar({ setSelectedItem, setLocalizacao }) {
 	};
 
 	return (
-		<div className="w-full h-full bg-gray-700 p- overflow-y-auto">
+		<div className="w-full h-full bg-gray-700 p- overflow-y-auto border-transparent rounded-xl">
 			<div className="sticky top-0 z-10 bg-gray-700 mb-4 p-3">
 				<div className="sticky top-0 z-10 flex items-center border border-gray-50 rounded-2xl px-4 py-2 shadow-sm ">
 					<Search className="text-blue-500 w-5 h-5 md:w-8 md:h-8 lg:w-5 lg:h-5 mr-2" />

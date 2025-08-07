@@ -13,7 +13,7 @@ function Quiz() {
 
 	if (!difficulty) {
 		return (
-			<div className="h-full w-full flex flex-col items-center  bg-gray-700  p-5 gap-30">
+			<div className="h-full w-full flex flex-col items-center  bg-gray-700  p-5 gap-30 border-transparent rounded-xl">
 				<h1 className=" text-xl md:text-4xl lg:text-3xl font-bold">Escolha o nível do Quiz Bíblico</h1>
 				<div className="flex gap-4">
 					<button

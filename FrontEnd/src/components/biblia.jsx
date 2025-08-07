@@ -51,7 +51,7 @@ function Biblia({ localizacao }) {
 
 	return (
 		<>
-			<div className="overflow-auto  h-full w-full bg-gray-700 ">
+			<div className="overflow-auto  h-full w-full bg-gray-700 border-transparent rounded-xl">
 				<div className="flex sticky top-0 z-10 bg-gray-700 gap-3 p-3 w-full justify-between">
 					<h1 className=" flex gap-3 text-center text-xl md:text-5xl lg:text-3xl font-bold mb-3 text-blue-500">
 						<BookOpenText className="hidden md:block md:w-11 md:h-11 lg:w-7 lg:h-7 text-blue-500 mt-1" />

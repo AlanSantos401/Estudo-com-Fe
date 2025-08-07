@@ -28,7 +28,7 @@ function Anotacoes() {
 	};
 
 	return (
-		<div className="overflow-auto h-full w-full p-3 pt-0 gap-3 bg-gray-700">
+		<div className="overflow-auto h-full w-full p-3 pt-0 gap-3 bg-gray-700 border-transparent rounded-xl" >
 			<div className=" sticky top-0 z-10 bg-gray-700  p-2 md:p-3 ">
 				<h2 className="flex gap-2 items-center text-2xl md:text-5xl lg:text-3xl text-blue-500 font-bold mb-1 md:mb-3 lg:mb-1">
 					<StickyNote className="h-7 w-7 md:h-10 md:w-10"/> Minhas Anotações

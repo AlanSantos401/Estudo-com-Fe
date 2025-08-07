@@ -37,7 +37,7 @@ function Calendario() {
   };
 
   return (
-    <div className="h-full w-full bg-gray-700 p-3 overflow-auto ">
+    <div className="h-full w-full bg-gray-700 p-3 overflow-auto border-transparent rounded-xl">
       {/* Header com navegação */}
       <div className="flex justify-between items-center mb-3 md:mb-6">
         <button
