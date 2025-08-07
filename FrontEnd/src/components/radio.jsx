@@ -1,4 +1,4 @@
-import { FastForward, Music2, Pause, Play, Rewind } from "lucide-react";
+import { FastForward,  Pause, Play, Rewind } from "lucide-react";
 import { useRef, useState } from "react";
 
 function RadioPlayer() {
