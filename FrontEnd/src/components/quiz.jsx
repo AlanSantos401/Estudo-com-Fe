@@ -77,7 +77,7 @@ function Quiz() {
 
 	if (showResult) {
 		return (
-			<div className="h-full w-full flex flex-col items-center bg-gray-700 p-4">
+			<div className="h-full w-full flex flex-col items-center bg-gray-700 p-4 border-transparent rounded-xl">
 				<h2 className="text-xl font-bold text-white">Resultado final:</h2>
 				<p className="text-white">
 					Você acertou {score} de {shuffledQuestions.length} perguntas!
@@ -97,7 +97,7 @@ function Quiz() {
 	}
 
 	return (
-		<div className="h-full w-full flex flex-col items-center  bg-gray-700  p-3 ">
+		<div className="h-full w-full flex flex-col items-center  bg-gray-700  p-3 border-transparent rounded-xl">
 			<div className="w-full ">
 				<button onClick={() => setDifficulty(null)}>
 					<ArrowLeft className="h-8 w-9 md:h-9 md:w-9 bg-gray-700 border-3 border-gray-50 rounded-3xl cursor-pointer hover:bg-gray-50" />
@@ -119,7 +119,7 @@ function Quiz() {
 						</button>
 					))}
 				</div>
-				<div className="w-full mt-25">
+				<div className="w-full mt-4 md:mt-25">
 					{selected && showFeedback && (
 						<p className="font-medium text-xl break-words">
 							{selected === currentQuestion.answer
