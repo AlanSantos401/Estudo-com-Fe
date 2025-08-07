@@ -1,48 +1,68 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const Ia = () => {
 	const [mensagem, setMensagem] = useState("");
-	const [resposta, setResposta] = useState("");
 	const [carregando, setCarregando] = useState(false);
-	const [textoNaDiv, setTextoNaDiv] = useState("");
+	const [historico, setHistorico] = useState([]);
+
+	const scrollRef = useRef(null);
 
 	const enviarParaCroq = async () => {
 		if (!mensagem.trim()) return;
 
-		setCarregando("Croq está pensando...");
-		setTextoNaDiv(mensagem);
+		const perguntaAtual = mensagem;
 		setMensagem("");
+		setCarregando(true);
 
 		try {
 			const respostaApi = await fetch(
-				"https://alansan55.app.n8n.cloud/webhook/89cefb53-c173-456e-a486-2799404711cb",
+				"http://localhost:5678/webhook/agente-cristao",
 				{
 					method: "POST",
 					headers: {
 						"Content-Type": "application/json",
 					},
-					body: JSON.stringify({ message: mensagem }),
+					body: JSON.stringify({ message: perguntaAtual }),
 				},
 			);
 
-			const texto = await respostaApi.text();
+			const data = await respostaApi.json();
 
-			if (!texto) throw new Error("Resposta vazia da IA");
+			if (!data || !data.resposta) throw new Error("Resposta vazia da IA");
 
-			const data = JSON.parse(texto);
+			const respostaRecebida =
+				data.resposta || "...";
 
-			setResposta(data.resposta || "Croq não entendeu sua pergunta.");
-			console.log(data);
+			console.log(respostaApi);
+
+			setHistorico((prev) => [
+				...prev,
+				{ pergunta: perguntaAtual, resposta: respostaRecebida },
+			]);
 		} catch (err) {
 			console.error("Erro ao comunicar com o Croq:", err.message);
-			setResposta("Croq não entendeu sua pergunta.");
+			setHistorico((prev) => [
+				...prev,
+				{
+					pergunta: perguntaAtual,
+					resposta: "Croq não entendeu sua pergunta.",
+				},
+			]);
 		} finally {
 			setCarregando(false);
 		}
 	};
 
+	// Scroll automático para o fim da conversa
+	useEffect(() => {
+		if (scrollRef.current) {
+			scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
+		}
+	}, [historico]);
+
 	return (
-		<div className="flex flex-col h-full w-full bg-gray-700 gap-2">
+		<div className="flex flex-col h-full w-full bg-gray-700 ">
+			{/* Cabeçalho */}
 			<div className="sticky top-0 z-10 bg-gray-700 pt-2">
 				<h1 className="text-xl font-bold ml-3 mt-0 text-blue-500">
 					Fale com o Croq
@@ -50,24 +70,38 @@ const Ia = () => {
 				<hr className="border border-gray-50 my-4" />
 			</div>
 
-			<div className="w-[98%] flex justify-end text-right  ">
-				{textoNaDiv && (
-					<p className="bg-amber-600 border border-transparent p-2 rounded-xl font-semibold">
-						{textoNaDiv}
-					</p>
-				)}
-			</div>
-
-			<div className=" w-[90%] flex-1 overflow-auto px-4 rounded min-h-[80px] h-[75%]  text-blue-500">
-				{resposta ? (
-					<p className="bg-blue-400/50 border border-transparent p-2 rounded-xl font-semibold">
-						{resposta}
-					</p>
+			{/* Área de Conversa */}
+			<div
+				ref={scrollRef}
+				className="flex flex-col w-full flex-1 overflow-auto px-4 rounded min-h-[80px] h-[75%] text-blue-500 gap-3"
+			>
+				{historico.length === 0 ? (
+					<p className="text-blue-500">Aguardando sua pergunta</p>
 				) : (
-					<p>Aguardando sua pergunta</p>
+					historico.map((item, index) => (
+						<div key={index} className="flex flex-col gap-1">
+							<div className="flex justify-end">
+								<p className=" text-blue-500 p-2 rounded-xl font-semibold max-w-[80%]">
+									{item.pergunta}
+								</p>
+							</div>
+							<div className="flex justify-start">
+								<p className=" text-blue-500 p-2 rounded-xl font-semibold max-w-[80%]">
+									{item.resposta}
+								</p>
+							</div>
+						</div>
+					))
+				)}
+
+				{carregando && (
+					<div className="flex justify-start">
+						<p className="text-blue-500 italic">Croq está pensando...</p>
+					</div>
 				)}
 			</div>
 
+			{/* Campo de Entrada */}
 			<div className="sticky bottom-0 z-10 bg-gray-700 flex gap-2 p-3">
 				<input
 					className="w-full outline-none text-lg md:text-3xl lg:text-lg border-2 border-gray-50 rounded-2xl h-11 md:h-15 lg:h-11 text-blue-500 bg-transparent pl-2 p-1"
@@ -91,4 +125,5 @@ const Ia = () => {
 		</div>
 	);
 };
+
 export default Ia;

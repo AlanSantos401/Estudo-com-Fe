@@ -44,7 +44,7 @@ const VersiculoDoDia = () => {
 	if (!versiculo) return <div>Carregando Versículo...</div>;
 
 	return (
-		<div className="h-full w-full overflow-y-auto p-2">
+		<div className="h-full w-full overflow-y-auto p-1">
 			<span>"{versiculo.texto}"</span>
 			<br />
 			<span>{versiculo.Referencia}</span>

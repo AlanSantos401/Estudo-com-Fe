@@ -72,7 +72,7 @@ function App() {
 					>
 						<div className="flex flex-col h-[70%] md:h-[43%] lg:h-[84%] w-full bg-gray-800 rounded-xl   text-3xl font-bold text-blue-500 gap-1 p-5 pt-8 ">
 							<button
-								className="lg:hidden absolute top-8 right-10 text-blue-500 text-3xl font-bold hover:text-4xl hover:text-red-600 transition-all duration-300"
+								className="lg:hidden absolute top-8 right-10 text-blue-500 text-3xl font-bold  hover:text-red-600 "
 								onClick={() => setMenuAberto(false)}
 							>
 								X
