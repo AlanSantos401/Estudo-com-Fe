@@ -54,7 +54,7 @@ function App() {
 
 				<div className="flex flex-col lg:flex-row lg:max-h-[84%] w-full gap-4 p-4">
 					<button
-						className="lg:hidden  fixed top-5 right-4 z-30 bg-gray-800 text-white p-2 rounded"
+						className="lg:hidden  fixed top-11 right-2 z-30 bg-gray-800 text-white p-2 rounded"
 						onClick={() => setMenuAberto(true)}
 					>
 						☰
@@ -152,7 +152,7 @@ function App() {
 						</div>
 					</div>
 
-					<div className="flex flex-col w-full h-[66vh] lg:h-[79vh] lg:w-3/5  order-3 lg:order-2 gap-4 overflow-auto lg:overflow-visible pb-5">
+					<div className="flex flex-col w-full h-[60vh] lg:h-[79vh] lg:w-3/5  order-3 lg:order-2 gap-4 overflow-auto lg:overflow-visible pb-5">
 						<div className="h-full lg:h-[85%] w-full lg:overflow-auto border-3 lg:border-2 border-gray-50 rounded-xl">
 							{selectedItem === "biblia" && (
 								<Biblia
