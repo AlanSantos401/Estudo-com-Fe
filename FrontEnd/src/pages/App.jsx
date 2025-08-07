@@ -54,7 +54,7 @@ function App() {
 
 				<div className="flex flex-col lg:flex-row lg:max-h-[84%] w-full gap-4 p-4">
 					<button
-						className="lg:hidden  fixed top-9 right-3 z-30 bg-gray-800 text-white p-2 rounded"
+						className="lg:hidden  fixed top-9 right-4 z-30 bg-gray-800 text-white p-2 rounded"
 						onClick={() => setMenuAberto(true)}
 					>
 						☰
@@ -71,7 +71,7 @@ function App() {
                            max-h-[100%] p-4 lg:pt-0
                         `}
 					>
-						<div className="flex flex-col max-h-[60vh] md:h-[43%] lg:h-screen w-full bg-gray-800 rounded-xl   text-3xl font-bold text-blue-500 gap-1 p-5 pt-8 ">
+						<div className="flex flex-col max-h-[50vh] md:h-[43%] lg:h-screen w-full bg-gray-800 rounded-xl   text-3xl font-bold text-blue-500 gap-1 p-5 pt-8 ">
 							<button
 								className="lg:hidden absolute top-8 right-10 text-blue-500 text-3xl font-bold  hover:text-red-600 "
 								onClick={() => setMenuAberto(false)}

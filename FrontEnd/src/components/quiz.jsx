@@ -119,7 +119,7 @@ function Quiz() {
 						</button>
 					))}
 				</div>
-				<div className="w-full mt-4 md:mt-25">
+				<div className="w-full mt-25">
 					{selected && showFeedback && (
 						<p className="font-medium text-xl break-words">
 							{selected === currentQuestion.answer
