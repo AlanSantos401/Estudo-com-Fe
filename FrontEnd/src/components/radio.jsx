@@ -38,7 +38,7 @@ function RadioPlayer() {
 		<div className="flex pb-5 bg-[url('./assets/udf.png')] bg-center bg-cover h-full w-full rounded-xl gap-8">
 			<audio
 				ref={audioRef}
-				src="/radio/stream"
+				src="https://stm20.xcast.com.br:9518/stream"
 				preload="none"
 				onError={() => setStatus("error")}
 				onPlaying={() => setStatus("playing")}
