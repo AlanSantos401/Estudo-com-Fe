@@ -52,7 +52,7 @@ function App() {
 					ESTUDE COM FÉ
 				</h1>
 
-				<div className="flex flex-col lg:flex-row lg:max-h-[84%] w-full gap-4 p-4">
+				<div className="flex flex-col lg:flex-row lg:max-h-[100%] w-full gap-4 p-4">
 					<button
 						className="lg:hidden  fixed top-11 right-4 z-30 bg-gray-800 text-white p-2 rounded"
 						onClick={() => setMenuAberto(true)}
@@ -71,7 +71,7 @@ function App() {
                            max-h-[100%] p-4 lg:pt-0
                         `}
 					>
-						<div className="flex flex-col max-h-[55vh] md:h-[43%] lg:h-screen w-full bg-gray-800 rounded-xl   text-3xl font-bold text-blue-500 gap-1 p-5 pt-8 ">
+						<div className="flex flex-col max-h-[55vh] md:h-[43%] lg:min-h-[64.5vh] w-full bg-gray-800 rounded-xl   text-3xl font-bold text-blue-500 gap-1 p-5 pt-8 ">
 							<button
 								className="lg:hidden absolute top-8 right-10 text-blue-500 text-3xl font-bold  hover:text-red-600 "
 								onClick={() => setMenuAberto(false)}
@@ -146,7 +146,7 @@ function App() {
 								<span className="text-2xl text-blue-500">Estudo com IA</span>
 							</div>
 
-							<div className="flex items-center w-full mt-18 md:mt-9">
+							<div className="flex items-center w-full mt-18 md:mt-16">
 								<User className="h-6 w-6  text-blue-500 cursor-pointer" />
 								<ChevronUp className="h-6 w-6  text-blue-500 cursor-pointer" />
 							</div>
